@@ -377,8 +377,8 @@ export const openings = [
 export type TeamMember = { name: string; role?: string; bio?: string; photo?: string };
 
 export const team: TeamMember[] = [
-  { name: "Ranveer Singh" },
-  { name: "Abhishek Bajpayee" },
-  { name: "Sujeet Singh" },
-  { name: "Yuvraj Singh Tomar" },
+  { name: "Ranveer Singh", role: "Operations Manager" },
+  { name: "Abhishek Bajpayee", role: "Operations Manager" },
+  { name: "Sujeet Singh", role: "IEC Manager" },
+  { name: "Yuvraj Singh Tomar", role: "Technology Manager" },
 ];
