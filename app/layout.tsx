@@ -11,7 +11,7 @@ const body = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap
 
 const SITE = "https://haritvanta.vercel.app";
 const DESCRIPTION =
-  "Haritvanta provides door-to-door waste collection and street sweeping & sanitation services for municipal bodies, townships and communities in India — with trained crews, fixed schedules and transparent daily reporting.";
+  "Haritvanta provides door-to-door waste collection, street sweeping & sanitation and IEC awareness services for municipal bodies, townships and communities in India — with trained crews, fixed schedules and transparent daily reporting.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
@@ -33,6 +33,8 @@ export const metadata: Metadata = {
     "municipal sanitation contractor",
     "waste management Uttar Pradesh",
     "Swachh Bharat sanitation services",
+    "IEC activities waste management",
+    "solid waste awareness campaign",
   ],
   openGraph: {
     type: "website",

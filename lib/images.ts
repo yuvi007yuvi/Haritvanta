@@ -52,6 +52,10 @@ export const img = {
   sweeperYellow: { src: u("1786297766759-9746a2e31bcf"), alt: "Street sweeper in uniform cleaning a road" },
   streetCleanerCart: { src: u("1791297973423-889788ff506c"), alt: "Street cleaner in a high-visibility vest with a cleaning cart" },
   broomStreet: { src: u("1648662594772-786f95b9e58b"), alt: "Sanitation worker with a broom on a city street" },
+  iecRally: { src: u("1774437557501-dada7efba5a6"), alt: "Women holding awareness posters at a community campaign" },
+  iecClassroom: { src: u("1692269725836-fbd72e98883f"), alt: "School children in a classroom during an awareness session" },
+  iecStudents: { src: u("1524069290683-0457abfe42c3"), alt: "Group of smiling school students" },
+  iecCleanup: { src: u("1758599668429-121d54188b9c"), alt: "Volunteers collecting litter during a cleanliness drive" },
 } as const;
 
 export type Img = { src: string; alt: string };

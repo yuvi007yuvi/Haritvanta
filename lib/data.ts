@@ -63,7 +63,7 @@ export type Service = {
 };
 
 /** Services Haritvanta operates today. Move a slug here when a service goes live. */
-export const liveSlugs = ["door-to-door-collection", "sweeping-sanitation"];
+export const liveSlugs = ["door-to-door-collection", "sweeping-sanitation", "iec-awareness"];
 
 const allServices: Omit<Service, "status">[] = [
   {
@@ -240,6 +240,31 @@ const allServices: Omit<Service, "status">[] = [
       { title: "Clear", text: "Lift swept waste and silt the same day — nothing is left on the roadside." },
     ],
     clients: ["Municipal corporations", "Nagar palikas & nagar panchayats", "Market committees", "Townships & campuses"],
+  },
+  {
+    slug: "iec-awareness",
+    no: "08",
+    title: "IEC & Community Awareness",
+    short:
+      "Information, Education & Communication (IEC) campaigns that build lasting habits — segregation at source, no littering and active citizen participation.",
+    summary:
+      "Collection and sweeping only stay effective when citizens take part. Haritvanta plans and runs IEC activities alongside every contract — door-to-door awareness, school programmes, rallies and street plays — so that households segregate waste, use bins and support a cleaner city.",
+    image: img.iecRally,
+    detailImage: img.iecStudents,
+    gallery: [img.iecClassroom, img.iecCleanup, img.binsRow],
+    scope: [
+      { title: "Door-to-door awareness", text: "Household visits by trained staff explaining wet and dry segregation, collection timings and helpline numbers." },
+      { title: "School & college programmes", text: "Interactive sessions, competitions and student cleanliness clubs that turn children into ambassadors for change." },
+      { title: "Rallies, nukkad nataks & drives", text: "Awareness rallies, street plays and community cleanliness drives in wards, markets and public places." },
+      { title: "Campaign materials", text: "Wall paintings, posters, pamphlets, vehicle branding and announcements aligned with Swachh Bharat Mission messaging." },
+    ],
+    process: [
+      { title: "Plan", text: "Identify low-segregation areas and set ward-wise awareness targets." },
+      { title: "Engage", text: "Run household visits, school sessions and community events." },
+      { title: "Reinforce", text: "Repeat key messages through materials, vehicles and announcements." },
+      { title: "Measure", text: "Track segregation levels and feedback, and report results to the client." },
+    ],
+    clients: ["Municipal corporations", "Nagar palikas & nagar panchayats", "Schools & colleges", "Resident welfare associations"],
   },
 ];
 

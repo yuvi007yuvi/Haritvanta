@@ -21,16 +21,16 @@ export function Capabilities() {
           </div>
           <Reveal className="self-end lg:col-span-3 lg:col-start-10" delay={0.15}>
             <p className="leading-relaxed text-muted">
-              We are focused on the two services every clean city depends on — reliable doorstep collection and
-              daily street sanitation — and doing them exceptionally well.
+              We focus on what every clean city depends on — reliable doorstep collection, daily street sanitation and
+              citizens who take part — and we do it exceptionally well.
             </p>
           </Reveal>
         </div>
 
         {/* Live services */}
-        <div className="mt-14 grid gap-14 md:mt-20 md:grid-cols-2 md:gap-8 lg:gap-12">
+        <div className="mt-14 grid gap-14 md:mt-20 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
           {liveServices.map((s, i) => (
-            <Reveal key={s.slug} delay={i * 0.12} className={i === 1 ? "md:mt-24" : ""}>
+            <Reveal key={s.slug} delay={i * 0.12} className={i % 2 === 1 ? "md:mt-24" : ""}>
               <Link href={`/services/${s.slug}`} className="group block">
                 <div className="relative aspect-[4/5] overflow-hidden bg-forest/10">
                   <Image
@@ -48,7 +48,7 @@ export function Capabilities() {
                 <div className="mt-8 flex items-start justify-between gap-6">
                   <div>
                     <p className="font-display text-sm font-semibold tabular-nums text-bhagwa">{s.no}</p>
-                    <h3 className="mt-3 font-display text-3xl font-semibold leading-tight text-charcoal transition-colors duration-500 group-hover:text-forest md:text-[2.25rem]">
+                    <h3 className="mt-3 font-display text-3xl font-semibold leading-tight text-charcoal transition-colors duration-500 group-hover:text-forest md:text-[2.25rem] lg:text-[1.85rem]">
                       {s.title}
                     </h3>
                   </div>

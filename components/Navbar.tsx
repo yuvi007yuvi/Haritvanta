@@ -132,7 +132,7 @@ export function Navbar() {
                   <div>
                     <p className="eyebrow text-muted">Our Services</p>
                     <p className="mt-4 font-display text-2xl font-semibold leading-snug text-forest">
-                      Doorstep collection and street sanitation today — more services coming soon.
+                      Collection, sanitation and IEC today — more services coming soon.
                     </p>
                   </div>
                   <Link href="/services" className="group mt-6 inline-flex items-center gap-2 text-sm font-medium text-forest">

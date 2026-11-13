@@ -15,7 +15,7 @@ export function Footer() {
               <span className="font-display text-xl font-bold tracking-[0.14em]">HARITVANTA</span>
             </Link>
             <p className="mt-7 max-w-sm leading-relaxed text-white/65">
-              Door-to-door waste collection and street sweeping &amp; sanitation for cities and communities across
+              Door-to-door waste collection, street sweeping &amp; sanitation and IEC awareness for cities and communities across
               India — delivered with operational discipline and long-term responsibility.
             </p>
             <Link
