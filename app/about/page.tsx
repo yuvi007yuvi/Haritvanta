@@ -19,19 +19,17 @@ const values = [
 ];
 
 const chain = [
-  { step: "Generation", text: "Awareness and segregation at source" },
-  { step: "Collection", text: "Doorstep and bulk collection" },
-  { step: "Transportation", text: "Tracked primary and secondary fleets" },
-  { step: "Processing", text: "Segregation, composting and RDF" },
-  { step: "Recovery", text: "Recyclables to authorised recyclers" },
-  { step: "Disposal", text: "Scientific handling of residuals only" },
+  { step: "Generation", text: "IEC awareness and segregation at source", live: true },
+  { step: "Collection", text: "Door-to-door collection and street sweeping", live: true },
+  { step: "Transportation", text: "Tracked primary and secondary fleets", live: false },
+  { step: "Processing", text: "Segregation, composting and RDF", live: false },
+  { step: "Recovery", text: "Recyclables to authorised recyclers", live: false },
+  { step: "Disposal", text: "Scientific handling of residuals only", live: false },
 ];
 
 const frameworks = [
   "Solid Waste Management Rules, 2016",
   "Plastic Waste Management Rules, 2016 (as amended)",
-  "Extended Producer Responsibility guidelines",
-  "Construction & Demolition Waste Management Rules, 2016",
   "Swachh Bharat Mission (Urban) 2.0 guidelines",
   "State Pollution Control Board consents & conditions",
 ];
@@ -103,21 +101,24 @@ export default function AboutPage() {
           <div className="grid gap-8 lg:grid-cols-12">
             <div className="lg:col-span-6">
               <Eyebrow>How We Work</Eyebrow>
-              <SplitText as="h2" text={"One partner across\nthe entire chain."} className="display-lg mt-6 text-forest" />
+              <SplitText as="h2" text={"Starting at the source,\nbuilding the full chain."} className="display-lg mt-6 text-forest" />
             </div>
             <Reveal className="self-end lg:col-span-4 lg:col-start-9">
               <p className="leading-relaxed text-muted">
-                Fragmented contracts create gaps where waste leaks out of the system. We operate each stage as part of
-                one connected, measured flow.
+                Today we work where clean cities begin — awareness, segregation and collection. The next stages are
+                being prepared so that one accountable partner can manage the whole flow.
               </p>
             </Reveal>
           </div>
-          <ol className="relative mt-20 grid gap-0 sm:grid-cols-2 lg:grid-cols-6">
+          <ol className="relative mt-20 grid gap-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {chain.map((c, i) => (
               <Reveal as="li" key={c.step} delay={i * 0.08} className="relative border-l border-line px-6 pb-10 lg:pb-0">
-                <span className="absolute -left-[5px] top-0 h-[9px] w-[9px] rounded-full bg-bhagwa" aria-hidden />
-                <p className="text-xs tabular-nums text-muted">0{i + 1}</p>
-                <p className="mt-10 font-display text-xl font-semibold text-forest lg:mt-24">{c.step}</p>
+                <span className={`absolute -left-[5px] top-0 h-[9px] w-[9px] rounded-full ${c.live ? "bg-bhagwa" : "border border-line bg-white"}`} aria-hidden />
+                <p className="flex items-center gap-3 text-xs tabular-nums text-muted">
+                  0{i + 1}
+                  <span className={`text-[0.65rem] uppercase tracking-[0.12em] ${c.live ? "text-bhagwa" : "text-muted/70"}`}>{c.live ? "Today" : "Coming soon"}</span>
+                </p>
+                <p className={`mt-10 font-display text-xl font-semibold lg:mt-24 ${c.live ? "text-forest" : "text-charcoal/50"}`}>{c.step}</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{c.text}</p>
               </Reveal>
             ))}

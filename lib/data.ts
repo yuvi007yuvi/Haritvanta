@@ -5,7 +5,7 @@ import { img, type Img } from "./images";
 /* ------------------------------------------------------------------ */
 export const company = {
   name: "Haritvanta",
-  legalName: "Haritvanta Environmental Services", // PLACEHOLDER: confirm registered entity name
+  legalName: "Haritvanta Environmental Services Pvt. Ltd.",
   tagline: "Integrated waste management & environmental services",
   email: "haritvantaofficial@gmail.com",
   careersEmail: "haritvantaofficial@gmail.com", // use a separate careers inbox here if you create one

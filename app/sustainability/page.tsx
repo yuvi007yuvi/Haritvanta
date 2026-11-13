@@ -15,17 +15,17 @@ export const metadata: Metadata = {
 const commitments = [
   {
     title: "Keep waste out of landfills",
-    text: "Every facility we operate is measured on diversion — how much is recovered as compost, recyclables or fuel, and how little remains as residual.",
+    text: "Segregated collection is where recovery starts. We keep wet and dry waste separate from the doorstep onward, so that more of it can be composted or recycled instead of dumped.",
     image: img.balesCardboard,
   },
   {
     title: "Protect land, water and air",
-    text: "Covered transport, leachate management, dust and odour control and regular environmental monitoring are standard on every site.",
+    text: "Daily sweeping, drain cleaning and same-day lifting of waste stop litter from blocking drains, polluting water bodies and being burnt in the open.",
     image: img.river,
   },
   {
-    title: "Return organics to the soil",
-    text: "Wet waste is processed into compost that supports agriculture and urban greening, closing the nutrient loop locally.",
+    title: "Encourage composting at source",
+    text: "Through IEC activities we promote home and community composting, so that wet waste returns to the soil close to where it is generated.",
     image: img.soilHands,
   },
   {

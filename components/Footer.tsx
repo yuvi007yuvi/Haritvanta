@@ -8,8 +8,8 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-forest-deep text-white">
       <div className="container-site pt-20 md:pt-28">
-        <div className="grid gap-14 border-b border-white/10 pb-16 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-4">
+        <div className="grid gap-12 border-b border-white/10 pb-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+          <div className="sm:col-span-2 lg:col-span-4">
             <Link href="/" className="flex items-center gap-2.5" aria-label="Haritvanta — home">
               <LogoMark className="h-10 w-10 text-white" />
               <span className="font-display text-xl font-bold tracking-[0.14em]">HARITVANTA</span>
@@ -27,7 +27,7 @@ export function Footer() {
             </Link>
           </div>
 
-          <FooterCol title="Company" className="lg:col-span-2 lg:col-start-6">
+          <FooterCol title="Company" className="lg:col-span-2">
             {[...nav.slice(1), { label: "Contact", href: "/contact" }].map((l) => (
               <FooterLink key={l.href} href={l.href}>{l.label}</FooterLink>
             ))}
@@ -40,16 +40,16 @@ export function Footer() {
             <FooterLink href="/services">More services coming soon</FooterLink>
           </FooterCol>
 
-          <FooterCol title="Contact" className="lg:col-span-2">
+          <FooterCol title="Contact" className="lg:col-span-3">
             <li className="text-white/65">
               {company.address.map((l) => <span key={l} className="block">{l}</span>)}
             </li>
-            <FooterLink href={`mailto:${company.email}`}>{company.email}</FooterLink>
-            <FooterLink href={`tel:${company.phone.replace(/\s/g, "")}`}>{company.phone}</FooterLink>
+            <FooterLink href={`mailto:${company.email}`}><span className="break-all">{company.email}</span></FooterLink>
+            <FooterLink href={`tel:${company.phone.replace(/\s/g, "")}`}><span className="whitespace-nowrap">{company.phone}</span></FooterLink>
           </FooterCol>
         </div>
 
-        <div className="flex flex-col gap-8 py-9 text-sm text-white/50 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-8 py-9 text-sm text-white/50 lg:flex-row lg:items-center lg:justify-between">
           <ul className="flex flex-wrap gap-x-7 gap-y-2" aria-label="Social media">
             {company.social.map((s) => (
               <li key={s.label}>
@@ -60,19 +60,33 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-8">
-            <Link href="/privacy-policy" className="link-line w-fit hover:text-white">Privacy Policy</Link>
-            <Link href="/terms" className="link-line w-fit hover:text-white">Terms &amp; Conditions</Link>
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8">
+            <Link href="/privacy-policy" className="link-line w-fit whitespace-nowrap hover:text-white">Privacy Policy</Link>
+            <Link href="/terms" className="link-line w-fit whitespace-nowrap hover:text-white">Terms &amp; Conditions</Link>
             <p>© {year} {company.legalName}. All rights reserved.</p>
           </div>
         </div>
       </div>
 
       {/* Oversized wordmark — a quiet signature at the base of every page */}
+      {/* SVG + textLength makes the word fit the container width exactly at every screen size */}
       <div aria-hidden className="pointer-events-none select-none overflow-hidden">
-        <p className="translate-y-[22%] whitespace-nowrap text-center font-display text-[21vw] font-bold leading-none tracking-[-0.04em] text-white/[0.04]">
-          HARITVANTA
-        </p>
+        <div className="container-site">
+          <svg viewBox="0 0 1000 150" className="-mb-[1.5%] block w-full" preserveAspectRatio="xMidYMax meet">
+            <text
+              x="0"
+              y="150"
+              textLength="1000"
+              lengthAdjust="spacingAndGlyphs"
+              className="font-display"
+              fontSize="182"
+              fontWeight="700"
+              fill="rgba(255,255,255,0.05)"
+            >
+              HARITVANTA
+            </text>
+          </svg>
+        </div>
       </div>
     </footer>
   );
