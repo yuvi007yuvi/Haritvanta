@@ -7,8 +7,8 @@ export const company = {
   name: "Harivanta",
   legalName: "Harivanta Environmental Services", // PLACEHOLDER: confirm registered entity name
   tagline: "Integrated waste management & environmental services",
-  email: "info@harivanta.com", // PLACEHOLDER
-  careersEmail: "careers@harivanta.com", // PLACEHOLDER
+  email: "haritvantaofficial@gmail.com",
+  careersEmail: "haritvantaofficial@gmail.com", // use a separate careers inbox here if you create one
   phone: "+91 00000 00000", // PLACEHOLDER
   address: ["Corporate Office", "Address to be confirmed", "India"], // PLACEHOLDER
   hours: "Monday – Saturday, 9:30 – 18:30 IST",
