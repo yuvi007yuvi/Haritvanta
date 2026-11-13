@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-white font-sans text-charcoal;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-balance;
+    letter-spacing: -0.025em;
+  }
+  ::selection {
+    @apply bg-bhagwa text-white;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-bhagwa ring-offset-2;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-5 sm:px-8 lg:px-12;
+  }
+  .eyebrow {
+    @apply font-sans text-eyebrow font-semibold uppercase;
+  }
+  .display-xl {
+    @apply font-display font-semibold leading-[1.02];
+    font-size: clamp(2.75rem, 7.2vw, 6.75rem);
+    letter-spacing: -0.035em;
+  }
+  .display-lg {
+    @apply font-display font-semibold leading-[1.05];
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+    letter-spacing: -0.03em;
+  }
+  .display-md {
+    @apply font-display font-semibold leading-[1.1];
+    font-size: clamp(1.875rem, 3.4vw, 3rem);
+    letter-spacing: -0.025em;
+  }
+  .lede {
+    @apply text-lg leading-relaxed text-charcoal/80 md:text-xl md:leading-relaxed;
+  }
+  /* Underline that draws in from the left on hover */
+  .link-line {
+    @apply relative inline-flex items-center gap-2;
+  }
+  .link-line::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-500 ease-expo;
+  }
+  .link-line:hover::after,
+  .group:hover .link-line::after {
+    @apply origin-left scale-x-100;
+  }
+  .link-line-static::after {
+    @apply origin-left scale-x-100 opacity-30;
+  }
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1.12); }
+  to { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
