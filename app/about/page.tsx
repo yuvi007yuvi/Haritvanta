@@ -3,11 +3,12 @@ import { CtaBand, ImpactStats, PageHero } from "@/components/sections";
 import { Reveal, RevealImage, Rule, SplitText } from "@/components/motion";
 import { Eyebrow } from "@/components/ui";
 import { img } from "@/lib/images";
+import { Team } from "@/components/Team";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Haritvanta is an Indian waste management and environmental services company delivering integrated, accountable solutions for cities, communities and industry.",
+    "About Haritvanta — door-to-door waste collection, street sanitation and IEC awareness in India. Meet our team: Ranveer Singh, Abhishek Bajpayee, Sujeet Singh and Yuvraj Singh Tomar.",
 };
 
 const values = [
@@ -170,6 +171,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <Team />
       <ImpactStats tone="paper" />
       <CtaBand image={img.delhi} />
     </>

@@ -4,7 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Intro } from "@/components/Intro";
-import { company, liveServices } from "@/lib/data";
+import { company, liveServices, team } from "@/lib/data";
 
 const display = Manrope({ subsets: ["latin"], variable: "--font-display", weight: ["500", "600", "700"], display: "swap" });
 const body = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });
@@ -67,7 +67,8 @@ const jsonLd = {
       email: company.email,
       description: DESCRIPTION,
       areaServed: { "@type": "Country", name: "India" },
-      knowsAbout: ["Door-to-door waste collection", "Street sweeping", "Sanitation", "Solid waste management"],
+      knowsAbout: ["Door-to-door waste collection", "Street sweeping", "Sanitation", "IEC activities", "Solid waste management"],
+      member: team.map((m) => ({ "@type": "Person", name: m.name, ...(m.role ? { jobTitle: m.role } : {}), worksFor: { "@id": `${SITE}/#organization` } })),
     },
     {
       "@type": "WebSite",

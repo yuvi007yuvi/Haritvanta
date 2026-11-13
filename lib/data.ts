@@ -368,3 +368,17 @@ export const openings = [
   { title: "Community Engagement Officer", team: "Field Programmes", location: "Multiple locations", type: "Full-time" },
   { title: "MIS & Reporting Executive", team: "Operations", location: "Corporate Office", type: "Full-time" },
 ];
+
+/* ------------------------------------------------------------------ */
+/*  TEAM                                                                */
+/*  Add `role` and `bio` for each member, and optionally `photo` as a   */
+/*  path inside /public (e.g. "/team/ranveer.jpg").                     */
+/* ------------------------------------------------------------------ */
+export type TeamMember = { name: string; role?: string; bio?: string; photo?: string };
+
+export const team: TeamMember[] = [
+  { name: "Ranveer Singh" },
+  { name: "Abhishek Bajpayee" },
+  { name: "Sujeet Singh" },
+  { name: "Yuvraj Singh Tomar" },
+];
