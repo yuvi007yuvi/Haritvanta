@@ -17,8 +17,8 @@ export function ImpactStats({ tone = "forest" }: { tone?: "forest" | "paper" }) 
           </div>
           <Reveal className="self-end lg:col-span-3 lg:col-start-10" delay={0.1}>
             <p className={dark ? "leading-relaxed text-white/70" : "leading-relaxed text-muted"}>
-              Every tonne collected, transported and processed is weighed, logged and reported. These indicators
-              summarise the scale of our work across contracts.
+              Every household covered, every road swept and every awareness drive is recorded and reported. These
+              indicators summarise the scale of our work across contracts.
             </p>
           </Reveal>
         </div>

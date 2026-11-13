@@ -16,19 +16,19 @@ const pillars = [
   },
   {
     title: "Responsible Waste Management",
-    text: "Segregation at source, scientific processing and minimal residuals, aligned with the Solid Waste Management Rules, 2016.",
+    text: "Segregation at source, same-day lifting and clean handover of waste, aligned with the Solid Waste Management Rules, 2016.",
   },
   {
     title: "Process Transparency",
-    text: "Every load weighed, every trip logged. Clients receive clear, auditable reporting rather than estimates.",
+    text: "Every household covered and every beat swept is recorded. Clients receive clear, auditable reporting rather than estimates.",
   },
   {
     title: "Technology-Enabled Operations",
-    text: "GPS-tracked fleets, digital attendance and weighbridge integration give real-time visibility across the network.",
+    text: "GPS-tracked vehicles, digital attendance and geo-tagged photo checks give real-time visibility of field work.",
   },
   {
     title: "Environmental Responsibility",
-    text: "We measure success by what we keep out of landfills, rivers and the air — and by the safety of our people.",
+    text: "We measure success by cleaner streets, unblocked drains and less open dumping — and by the safety of our people.",
   },
 ];
 

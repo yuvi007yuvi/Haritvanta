@@ -178,7 +178,7 @@ export function Counter({ value, duration = 2.2, className }: { value: number; d
   useEffect(() => {
     if (!inView) return;
     if (reduce) return setDisplay(value);
-    const c = animate(0, value, { duration, ease: EASE, onUpdate: (v) => setDisplay(Math.round(v)) });
+    const c = animate(0, value, { duration, ease: EASE, onUpdate: (v) => setDisplay(Math.round(v)), onComplete: () => setDisplay(value) });
     return () => c.stop();
   }, [inView, value, duration, reduce]);
 

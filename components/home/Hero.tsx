@@ -9,7 +9,7 @@ import { introDelay } from "../Intro";
 import { img } from "@/lib/images";
 
 const lines = ["Transforming Waste.", "Building a Better Tomorrow."];
-const chain = ["Collection", "Transportation", "Processing", "Recovery"];
+const chain = ["Door-to-door collection", "Sweeping & sanitation", "IEC awareness"];
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
