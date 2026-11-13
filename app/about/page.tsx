@@ -8,7 +8,7 @@ import { Team } from "@/components/Team";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "About Haritvanta — door-to-door waste collection, street sanitation and IEC awareness in India. Meet our team: Ranveer Singh, Abhishek Bajpayee, Sujeet Singh and Yuvraj Singh Tomar.",
+    "About Haritvanta — door-to-door waste collection, street sanitation and IEC awareness in India. Meet our team: Ranveer Singh, Abhishek Bajpai, Sujeet Singh and Yuvraj Singh Tomar.",
 };
 
 const values = [
