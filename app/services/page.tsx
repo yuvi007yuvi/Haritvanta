@@ -31,13 +31,13 @@ export default function ServicesPage() {
       />
 
       {/* Service index strip */}
-      <nav aria-label="Services on this page" className="sticky top-0 z-30 hidden border-b border-line bg-white/95 backdrop-blur-sm lg:block">
+      <nav aria-label="Services on this page" className="sticky top-0 z-30 hidden border-b border-line bg-white/95 backdrop-blur-sm xl:block">
         <ul className="container-site flex justify-between">
           {services.map((s) => (
             <li key={s.slug}>
               <a href={`#${s.slug}`} className="group flex items-center gap-2 py-5 text-sm text-muted hover:text-forest">
                 <span className="text-xs tabular-nums text-bhagwa">{s.no}</span>
-                <span className="link-line">{s.title.replace(" Management", "").replace(" & Logistics", "")}</span>
+                <span className="link-line">{s.title.replace(/ (Waste )?Management$| & Logistics| Services$| Waste Collection/g, "").replace("Waste ", "")}</span>
               </a>
             </li>
           ))}

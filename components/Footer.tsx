@@ -10,9 +10,9 @@ export function Footer() {
       <div className="container-site pt-20 md:pt-28">
         <div className="grid gap-14 border-b border-white/10 pb-16 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
-            <Link href="/" className="flex items-center gap-2.5" aria-label="Harivanta — home">
+            <Link href="/" className="flex items-center gap-2.5" aria-label="Haritvanta — home">
               <LogoMark className="h-10 w-10 text-white" />
-              <span className="font-display text-xl font-bold tracking-[0.14em]">HARIVANTA</span>
+              <span className="font-display text-xl font-bold tracking-[0.14em]">HARITVANTA</span>
             </Link>
             <p className="mt-7 max-w-sm leading-relaxed text-white/65">
               Integrated waste management and environmental services for cities, communities and industry across
@@ -70,7 +70,7 @@ export function Footer() {
       {/* Oversized wordmark — a quiet signature at the base of every page */}
       <div aria-hidden className="pointer-events-none select-none overflow-hidden">
         <p className="translate-y-[22%] whitespace-nowrap text-center font-display text-[21vw] font-bold leading-none tracking-[-0.04em] text-white/[0.04]">
-          HARIVANTA
+          HARITVANTA
         </p>
       </div>
     </footer>

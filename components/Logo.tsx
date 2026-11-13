@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-/** Harivanta mark: an "H" whose right stem sprouts a Bhagwa leaf — growth from infrastructure. */
+/** Haritvanta mark: an "H" whose right stem sprouts a Bhagwa leaf — growth from infrastructure. */
 export function LogoMark({ className = "h-9 w-9" }: { className?: string }) {
   return (
     <svg viewBox="0 0 40 40" className={className} aria-hidden="true">
@@ -17,11 +17,11 @@ export function Logo({ tone = "dark", onClick }: { tone?: "dark" | "light"; onCl
     <Link
       href="/"
       onClick={onClick}
-      aria-label="Harivanta — home"
+      aria-label="Haritvanta — home"
       className={`flex items-center gap-2.5 transition-colors duration-500 ${tone === "light" ? "text-white" : "text-forest"}`}
     >
       <LogoMark />
-      <span className="font-display text-[1.15rem] font-bold tracking-[0.14em]">HARIVANTA</span>
+      <span className="font-display text-[1.15rem] font-bold tracking-[0.14em]">HARITVANTA</span>
     </Link>
   );
 }

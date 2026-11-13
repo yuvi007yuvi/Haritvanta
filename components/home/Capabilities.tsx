@@ -26,7 +26,7 @@ export function Capabilities() {
           </div>
           <Reveal className="self-end lg:col-span-3 lg:col-start-10" delay={0.15}>
             <p className="leading-relaxed text-muted">
-              Six integrated service lines, designed to work independently or as a single, accountable system — from
+              Seven integrated service lines, designed to work independently or as a single, accountable system — from
               the first doorstep collection to the final recovered bale.
             </p>
           </Reveal>
@@ -52,7 +52,7 @@ export function Capabilities() {
               </AnimatePresence>
               <div className="absolute bottom-0 left-0 z-10 flex items-center gap-3 bg-white px-5 py-3 text-sm">
                 <span className="tabular-nums text-bhagwa">{services[active].no}</span>
-                <span className="text-charcoal">/ 06</span>
+                <span className="text-charcoal">/ {String(services.length).padStart(2, "0")}</span>
               </div>
             </div>
           </div>

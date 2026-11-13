@@ -58,7 +58,7 @@ export function ImpactStats({ tone = "forest" }: { tone?: "forest" | "paper" }) 
 export function CtaBand({
   image,
   title = "Let's Build a Cleaner Tomorrow.",
-  text = "Partner with Harivanta to create smarter, more sustainable waste management solutions.",
+  text = "Partner with Haritvanta to create smarter, more sustainable waste management solutions.",
   cta = "Discuss a Project",
 }: {
   image: Img;

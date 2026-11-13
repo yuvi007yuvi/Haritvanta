@@ -21,7 +21,7 @@ export function Intro() {
 
   if (done) return null;
 
-  const letters = "HARIVANTA".split("");
+  const letters = "HARITVANTA".split("");
   return (
     <motion.div
       className="intro fixed inset-0 z-[100] flex items-center justify-center bg-forest-deep"

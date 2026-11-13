@@ -1,4 +1,4 @@
-# Harivanta — Corporate Website
+# Haritvanta — Corporate Website
 
 Next.js 15 (App Router) · TypeScript · Tailwind CSS · Framer Motion · Lucide.
 
@@ -52,7 +52,7 @@ Everything below is marked `PLACEHOLDER` in the code.
 | Email, phone, office address, social links, legal entity name | `lib/data.ts` → `company` |
 | Production domain | `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts` |
 | Privacy Policy & Terms (templates — need legal review) | `app/privacy-policy`, `app/terms` |
-| Photography (free-licence Unsplash images; replace with Harivanta's own) | `lib/images.ts` |
+| Photography (free-licence Unsplash images; replace with Haritvanta's own) | `lib/images.ts` |
 | Contact form backend | `app/api/contact/route.ts` |
 
 ## Notes

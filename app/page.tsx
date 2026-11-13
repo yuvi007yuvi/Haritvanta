@@ -48,7 +48,7 @@ export default function HomePage() {
             <div className="lg:col-span-6 lg:col-start-7 lg:pt-14">
               <Reveal>
                 <p className="lede">
-                  Harivanta is an Indian waste management and environmental services company. We take responsibility
+                  Haritvanta is an Indian waste management and environmental services company. We take responsibility
                   for the complete journey of waste — from the household doorstep to its final, recovered form.
                 </p>
               </Reveal>
@@ -61,7 +61,7 @@ export default function HomePage() {
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
-                <ArrowLink href="/about" className="mt-10 text-forest">Explore Harivanta</ArrowLink>
+                <ArrowLink href="/about" className="mt-10 text-forest">Explore Haritvanta</ArrowLink>
               </Reveal>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function HomePage() {
 
       <Capabilities />
 
-      {/* ---------------------------------------------------------- Why Harivanta */}
+      {/* ---------------------------------------------------------- Why Haritvanta */}
       <section className="bg-paper" aria-labelledby="why-title">
         <div className="grid lg:grid-cols-2">
           <div className="relative min-h-[420px] lg:min-h-0">
@@ -120,7 +120,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="px-5 py-24 sm:px-8 md:py-32 lg:px-16 xl:px-24">
-            <Eyebrow>Why Harivanta</Eyebrow>
+            <Eyebrow>Why Haritvanta</Eyebrow>
             <SplitText as="h2" text={"Built for the realities\nof Indian cities."} className="display-md mt-6 max-w-[16ch] text-forest" />
             <Reveal delay={0.1}>
               <p className="mt-7 max-w-lg leading-relaxed text-muted">

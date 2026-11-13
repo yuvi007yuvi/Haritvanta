@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { projects, services } from "@/lib/data";
 
-const base = "https://www.harivanta.com"; // PLACEHOLDER: production domain
+const base = "https://haritvanta.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ["", "/about", "/services", "/projects", "/sustainability", "/careers", "/contact"];

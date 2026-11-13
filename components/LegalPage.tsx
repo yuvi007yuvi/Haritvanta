@@ -9,7 +9,7 @@ export function LegalPage({ title, updated, sections }: { title: string; updated
           <p className="text-sm text-muted lg:col-span-3">Last updated: {updated}</p>
           <div className="space-y-12 lg:col-span-7">
             <p className="border-l-2 border-bhagwa pl-5 text-sm leading-relaxed text-muted">
-              This is a template for review by Harivanta&rsquo;s legal advisers and must be finalised before publication.
+              This is a template for review by Haritvanta&rsquo;s legal advisers and must be finalised before publication.
             </p>
             {sections.map((s, i) => (
               <div key={s.h} className="border-t border-line pt-8">

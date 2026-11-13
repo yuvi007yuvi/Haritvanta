@@ -9,18 +9,18 @@ const display = Manrope({ subsets: ["latin"], variable: "--font-display", weight
 const body = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.harivanta.com"), // PLACEHOLDER: production domain
+  metadataBase: new URL("https://haritvanta.vercel.app"),
   title: {
-    default: "Harivanta — Integrated Waste Management & Environmental Services",
-    template: "%s | Harivanta",
+    default: "Haritvanta — Integrated Waste Management & Environmental Services",
+    template: "%s | Haritvanta",
   },
   description:
-    "Harivanta delivers integrated waste management and environmental services in India — collection, transportation, processing, material recovery and industrial waste solutions.",
+    "Haritvanta delivers integrated waste management and environmental services in India — collection, transportation, processing, material recovery and industrial waste solutions.",
   keywords: ["waste management India", "municipal solid waste", "door-to-door collection", "material recovery facility", "recycling", "environmental services"],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "Harivanta",
+    siteName: "Haritvanta",
   },
   icons: { icon: "/icon.svg" },
 };

@@ -8,7 +8,7 @@ import { img } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Harivanta to discuss waste management and environmental services for your city, site or facility.",
+  description: "Get in touch with Haritvanta to discuss waste management and environmental services for your city, site or facility.",
 };
 
 export default function ContactPage() {

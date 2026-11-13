@@ -4,8 +4,8 @@ import { img, type Img } from "./images";
 /*  COMPANY DETAILS — replace placeholders with verified information   */
 /* ------------------------------------------------------------------ */
 export const company = {
-  name: "Harivanta",
-  legalName: "Harivanta Environmental Services", // PLACEHOLDER: confirm registered entity name
+  name: "Haritvanta",
+  legalName: "Haritvanta Environmental Services", // PLACEHOLDER: confirm registered entity name
   tagline: "Integrated waste management & environmental services",
   email: "haritvantaofficial@gmail.com",
   careersEmail: "haritvantaofficial@gmail.com", // use a separate careers inbox here if you create one
@@ -68,7 +68,7 @@ export const services: Service[] = [
     short:
       "End-to-end management of urban solid waste for municipal bodies — from planning and collection to processing and scientific disposal.",
     summary:
-      "Urban local bodies need a partner that can take responsibility for the entire waste chain. Harivanta plans, operates and reports on integrated municipal systems built around the Solid Waste Management Rules, 2016 — with every stage measured and every tonne accounted for.",
+      "Urban local bodies need a partner that can take responsibility for the entire waste chain. Haritvanta plans, operates and reports on integrated municipal systems built around the Solid Waste Management Rules, 2016 — with every stage measured and every tonne accounted for.",
     image: img.landfillDozer,
     detailImage: img.landfillAerial,
     gallery: [img.truckWorkers, img.machinery, img.landfillAerial2],
@@ -118,7 +118,7 @@ export const services: Service[] = [
     short:
       "A planned, monitored fleet that moves waste safely from collection points and transfer stations to processing facilities.",
     summary:
-      "Transportation is the link that holds a waste system together. Harivanta operates and manages fleets with planned routing, preventive maintenance and live tracking — so waste moves on time, covered, and without spillage.",
+      "Transportation is the link that holds a waste system together. Haritvanta operates and manages fleets with planned routing, preventive maintenance and live tracking — so waste moves on time, covered, and without spillage.",
     image: img.truckBlue,
     detailImage: img.truckWhite,
     gallery: [img.truckOrange, img.heroFacility, img.truckWorkers],
@@ -168,7 +168,7 @@ export const services: Service[] = [
     short:
       "Material Recovery Facilities that grade, bale and channel recyclables into verified recycling value chains.",
     summary:
-      "Every bale that leaves a Harivanta facility has a destination. Our material recovery operations sort dry waste into marketable grades — paper, plastics, metals, glass — and link them to authorised recyclers with complete traceability.",
+      "Every bale that leaves a Haritvanta facility has a destination. Our material recovery operations sort dry waste into marketable grades — paper, plastics, metals, glass — and link them to authorised recyclers with complete traceability.",
     image: img.bales,
     detailImage: img.balesCardboard,
     gallery: [img.bottlesCans, img.cans, img.scrapExcavator],
@@ -211,6 +211,31 @@ export const services: Service[] = [
     ],
     clients: ["Manufacturing units", "Corporate campuses", "Hotels & hospitality", "Hospitals (non-biomedical streams)"],
   },
+  {
+    slug: "sweeping-sanitation",
+    no: "07",
+    title: "Sweeping & Sanitation Services",
+    short:
+      "Daily road sweeping, drain cleaning and public-space sanitation that keep streets, markets and neighbourhoods visibly clean.",
+    summary:
+      "A clean city is judged at street level. Haritvanta deploys trained sweeping crews and mechanised equipment on planned beats — covering roads, markets, public spaces and drains — with supervision, attendance tracking and same-day removal of everything collected.",
+    image: img.streetSweeping,
+    detailImage: img.broomStreet,
+    gallery: [img.sweeperYellow, img.streetCleanerCart, img.sweeper],
+    scope: [
+      { title: "Manual road sweeping", text: "Beat-wise sweeping of roads, lanes and footpaths on fixed daily schedules, including night sweeping for commercial areas." },
+      { title: "Mechanised sweeping", text: "Truck-mounted and compact sweepers for arterial roads, flyovers and high-traffic corridors." },
+      { title: "Drain & nallah cleaning", text: "De-silting of roadside drains and nallahs, with pre-monsoon cleaning drives and safe disposal of silt." },
+      { title: "Public space sanitation", text: "Cleaning of markets, bus stands, parks, ghats and public toilets, plus litter-bin servicing and event clean-ups." },
+    ],
+    process: [
+      { title: "Map", text: "Divide the service area into sweeping beats by road type and footfall." },
+      { title: "Deploy", text: "Assign trained, equipped crews and machines to every beat and shift." },
+      { title: "Supervise", text: "Track attendance and beat completion with geo-tagged photo checks." },
+      { title: "Clear", text: "Lift swept waste and silt the same day — nothing is left on the roadside." },
+    ],
+    clients: ["Municipal corporations", "Nagar palikas & nagar panchayats", "Market committees", "Townships & campuses"],
+  },
 ];
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
@@ -218,7 +243,7 @@ export const getService = (slug: string) => services.find((s) => s.slug === slug
 /* ------------------------------------------------------------------ */
 /*  PROJECTS                                                            */
 /*  PLACEHOLDER case studies: names, locations and descriptions are     */
-/*  representative only. Replace with actual Harivanta projects.        */
+/*  representative only. Replace with actual Haritvanta projects.        */
 /* ------------------------------------------------------------------ */
 export type Project = {
   slug: string;

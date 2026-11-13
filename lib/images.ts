@@ -1,7 +1,7 @@
 /**
  * Photography library.
  * All images are free-licence photographs from Unsplash (images.unsplash.com).
- * Replace with Harivanta's own commissioned photography when available —
+ * Replace with Haritvanta's own commissioned photography when available —
  * only the `src` values need to change.
  */
 const u = (id: string) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=2400&q=80`;
@@ -48,6 +48,10 @@ export const img = {
   sweeper: { src: u("1678860895912-f0f8f784a44d"), alt: "Sanitation worker in uniform with a broom" },
   planReview: { src: u("1742112125567-3e8967bad60f"), alt: "Site engineers reviewing plans in the field" },
   engineer: { src: u("1659353588150-a9dff1059c54"), alt: "Site engineer in a safety vest with documents" },
+  streetSweeping: { src: u("1792779793110-2369acaa0a61"), alt: "Sanitation worker sweeping litter from a wet street" },
+  sweeperYellow: { src: u("1786297766759-9746a2e31bcf"), alt: "Street sweeper in uniform cleaning a road" },
+  streetCleanerCart: { src: u("1791297973423-889788ff506c"), alt: "Street cleaner in a high-visibility vest with a cleaning cart" },
+  broomStreet: { src: u("1648662594772-786f95b9e58b"), alt: "Sanitation worker with a broom on a city street" },
 } as const;
 
 export type Img = { src: string; alt: string };

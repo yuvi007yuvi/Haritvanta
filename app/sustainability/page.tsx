@@ -9,7 +9,7 @@ import { img } from "@/lib/images";
 export const metadata: Metadata = {
   title: "Sustainability",
   description:
-    "Harivanta's environmental approach: waste reduction, resource recovery, recycling, environmental protection and community participation.",
+    "Haritvanta's environmental approach: waste reduction, resource recovery, recycling, environmental protection and community participation.",
 };
 
 const commitments = [
@@ -134,7 +134,7 @@ export default function SustainabilityPage() {
         </div>
       </section>
 
-      <CtaBand image={img.greenCity} title={"Make your city\nmore circular."} text="Work with Harivanta to design waste programmes that recover more and dispose of less." />
+      <CtaBand image={img.greenCity} title={"Make your city\nmore circular."} text="Work with Haritvanta to design waste programmes that recover more and dispose of less." />
     </>
   );
 }

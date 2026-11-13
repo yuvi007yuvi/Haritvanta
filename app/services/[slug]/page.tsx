@@ -29,7 +29,7 @@ export default async function ServiceDetail({ params }: Props) {
 
   return (
     <>
-      <PageHero variant="split" eyebrow={`Service ${s.no} / 06`} title={s.title} intro={s.short} image={s.detailImage} />
+      <PageHero variant="split" eyebrow={`Service ${s.no} / ${String(services.length).padStart(2, "0")}`} title={s.title} intro={s.short} image={s.detailImage} />
 
       {/* Overview */}
       <section className="bg-white py-24 md:py-32">

@@ -111,7 +111,7 @@ export function ContactForm() {
           <div className="sm:col-span-2">
             <label className="flex cursor-pointer items-start gap-3 text-sm text-muted">
               <input id="cf-consent" type="checkbox" checked={f.consent} onChange={(e) => set("consent", e.target.checked)} onBlur={() => blur("consent")} className="mt-0.5 h-4 w-4 shrink-0 accent-forest" aria-invalid={!!err("consent")} />
-              <span>I agree that Harivanta may use these details to respond to my enquiry, as described in the <a href="/privacy-policy" className="text-forest underline underline-offset-2">Privacy Policy</a>.</span>
+              <span>I agree that Haritvanta may use these details to respond to my enquiry, as described in the <a href="/privacy-policy" className="text-forest underline underline-offset-2">Privacy Policy</a>.</span>
             </label>
             {err("consent") && <p className="mt-2 text-sm text-[#B4441B]">{err("consent")}</p>}
           </div>

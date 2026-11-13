@@ -5,7 +5,7 @@ import { img } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Selected Harivanta projects in municipal waste management, material recovery, remediation and industrial waste services.",
+  description: "Selected Haritvanta projects in municipal waste management, material recovery, remediation and industrial waste services.",
 };
 
 export default function ProjectsPage() {

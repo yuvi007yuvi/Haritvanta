@@ -7,7 +7,7 @@ import { img } from "@/lib/images";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Harivanta is an Indian waste management and environmental services company delivering integrated, accountable solutions for cities, communities and industry.",
+    "Haritvanta is an Indian waste management and environmental services company delivering integrated, accountable solutions for cities, communities and industry.",
 };
 
 const values = [
@@ -39,7 +39,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Harivanta"
+        eyebrow="About Haritvanta"
         title={"An environmental\ninfrastructure partner."}
         intro="We build and operate the everyday systems that keep cities clean and resources in use — with the discipline of an infrastructure company and the conviction of an environmental one."
         image={img.cityAerial}
@@ -54,13 +54,13 @@ export default function AboutPage() {
           <div className="lg:col-span-8">
             <SplitText
               as="p"
-              text="Harivanta was founded on a simple observation: India's cities do not lack intent on waste — they lack reliable, accountable execution."
+              text="Haritvanta was founded on a simple observation: India's cities do not lack intent on waste — they lack reliable, accountable execution."
               className="font-display text-[1.75rem] font-medium leading-[1.3] tracking-tight text-forest md:text-[2.5rem]"
             />
             <div className="mt-14 grid gap-8 md:grid-cols-2">
               <Reveal>
                 <p className="leading-relaxed text-muted">
-                  The name Harivanta draws from <em>hari</em> — green, the living world — and speaks to what we work
+                  The name Haritvanta draws from <em>harit</em> — green, the living world — and speaks to what we work
                   to protect. Our work, however, is grounded in the practical: vehicles that arrive on time, crews that
                   are trained and equipped, facilities that run safely, and data that clients can trust.
                 </p>

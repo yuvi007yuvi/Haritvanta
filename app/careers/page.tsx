@@ -8,7 +8,7 @@ import { img } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Careers",
-  description: "Build a career in environmental services with Harivanta — operations, processing, logistics, compliance and engineering roles across India.",
+  description: "Build a career in environmental services with Haritvanta — operations, processing, logistics, compliance and engineering roles across India.",
 };
 
 const reasons = [
@@ -35,7 +35,7 @@ export default function CareersPage() {
       <section className="bg-white py-24 md:py-32">
         <div className="container-site grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Eyebrow>Why Harivanta</Eyebrow>
+            <Eyebrow>Why Haritvanta</Eyebrow>
             <SplitText as="h2" text={"A workplace built\non responsibility."} className="display-md mt-6 text-forest" />
           </div>
           <div className="grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:col-span-7 lg:col-start-6">
