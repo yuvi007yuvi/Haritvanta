@@ -67,9 +67,9 @@ export default function AboutPage() {
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="leading-relaxed text-muted">
-                  Today we partner with urban local bodies, development authorities, industrial estates and private
-                  establishments to design and operate waste systems end to end — combining field operations,
-                  processing infrastructure and environmental management under one accountable team.
+                  Today we deliver door-to-door waste collection and street sweeping &amp; sanitation for urban local
+                  bodies and communities. Transportation, processing and material recovery services are being
+                  prepared next, so that clients can rely on one accountable team for the whole waste chain.
                 </p>
               </Reveal>
             </div>

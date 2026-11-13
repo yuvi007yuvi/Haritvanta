@@ -29,7 +29,30 @@ export default async function ServiceDetail({ params }: Props) {
 
   return (
     <>
-      <PageHero variant="split" eyebrow={`Service ${s.no} / ${String(services.length).padStart(2, "0")}`} title={s.title} intro={s.short} image={s.detailImage} />
+      <PageHero
+        variant="split"
+        eyebrow={`Service ${s.no} · ${s.status === "live" ? "Operating now" : "Coming soon"}`}
+        title={s.title}
+        intro={s.short}
+        image={s.detailImage}
+      />
+
+      {s.status === "upcoming" && (
+        <div className="border-b border-line bg-paper">
+          <div className="container-site flex flex-col gap-4 py-6 md:flex-row md:items-center md:justify-between">
+            <p className="flex items-start gap-3 text-charcoal">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-bhagwa" aria-hidden />
+              <span>
+                <strong className="font-semibold text-forest">Launching soon.</strong> This service is being prepared and
+                is not yet available. Below is how we plan to deliver it.
+              </span>
+            </p>
+            <Link href="/contact" className="link-line w-fit shrink-0 text-sm font-medium text-forest">
+              Register your interest
+            </Link>
+          </div>
+        </div>
+      )}
 
       {/* Overview */}
       <section className="bg-white py-24 md:py-32">
@@ -55,7 +78,7 @@ export default async function ServiceDetail({ params }: Props) {
             <div className="lg:col-span-4">
               <div className="lg:sticky lg:top-32">
                 <Eyebrow>Scope of Service</Eyebrow>
-                <h2 className="display-md mt-6 text-forest">What we deliver.</h2>
+                <h2 className="display-md mt-6 text-forest">{s.status === "live" ? "What we deliver." : "What we will deliver."}</h2>
                 <div className="mt-10 hidden lg:block">
                   <RevealImage src={s.gallery[0].src} alt={s.gallery[0].alt} sizes="30vw" className="aspect-[4/5]" />
                 </div>
@@ -80,7 +103,7 @@ export default async function ServiceDetail({ params }: Props) {
       <section className="bg-forest py-24 text-white md:py-32">
         <div className="container-site">
           <Eyebrow tone="light">Our Process</Eyebrow>
-          <SplitText as="h2" text="How the work is delivered." className="display-md mt-6 max-w-[18ch]" />
+          <SplitText as="h2" text={s.status === "live" ? "How the work is delivered." : "How we will deliver it."} className="display-md mt-6 max-w-[18ch]" />
           <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-0">
             {s.process.map((p, i) => (
               <Reveal as="li" key={p.title} delay={i * 0.1} className="lg:pr-10">

@@ -48,16 +48,16 @@ export default function HomePage() {
             <div className="lg:col-span-6 lg:col-start-7 lg:pt-14">
               <Reveal>
                 <p className="lede">
-                  Haritvanta is an Indian waste management and environmental services company. We take responsibility
-                  for the complete journey of waste — from the household doorstep to its final, recovered form.
+                  Haritvanta is an Indian waste management company keeping cities clean at street level — through
+                  reliable door-to-door waste collection and daily sweeping &amp; sanitation.
                 </p>
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="mt-6 leading-relaxed text-muted">
-                  Our teams manage segregated collection, plan and operate transportation fleets, run processing and
-                  material recovery facilities, and deliver environmental management programmes for municipal bodies,
-                  industry and communities. Each service is designed to recover as much value as possible and to send
-                  as little as possible to disposal.
+                  Our trained field crews collect segregated waste from every household on fixed schedules, sweep
+                  roads and markets, clean drains and keep public spaces sanitary for municipal bodies and communities.
+                  We are now preparing to add transportation, processing and material recovery — building towards a
+                  fully integrated waste service.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>

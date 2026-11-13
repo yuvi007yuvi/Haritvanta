@@ -37,10 +37,10 @@ export const nav = [
 export const impactPlaceholder = true;
 
 export const impact = [
-  { value: 100000, suffix: "+", unit: "tonnes", label: "Waste collected", note: "Cumulative, all contracts" },
-  { value: 10, suffix: "+", unit: "locations", label: "Locations served", note: "Cities, towns and wards" },
-  { value: 10, suffix: "", unit: "projects", label: "Operational projects", note: "Active and completed" },
-  { value: 100, suffix: "", unit: "TPD", label: "Processing capacity", note: "Tonnes per day, installed" },
+  { value: 10000, suffix: "+", unit: "households", label: "Households covered", note: "Daily door-to-door collection" },
+  { value: 100, suffix: "+", unit: "km / day", label: "Road length swept", note: "Manual and mechanised sweeping" },
+  { value: 10, suffix: "+", unit: "wards", label: "Wards served", note: "Across active contracts" },
+  { value: 200, suffix: "+", unit: "staff", label: "Sanitation workforce", note: "Trained, equipped field crews" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -58,9 +58,14 @@ export type Service = {
   scope: { title: string; text: string }[];
   process: { title: string; text: string }[];
   clients: string[];
+  /** "live" = operating today; "upcoming" = launching soon */
+  status: "live" | "upcoming";
 };
 
-export const services: Service[] = [
+/** Services Haritvanta operates today. Move a slug here when a service goes live. */
+export const liveSlugs = ["door-to-door-collection", "sweeping-sanitation"];
+
+const allServices: Omit<Service, "status">[] = [
   {
     slug: "municipal-solid-waste-management",
     no: "01",
@@ -238,6 +243,15 @@ export const services: Service[] = [
   },
 ];
 
+// Live services are listed first; numbering follows display order.
+export const services: Service[] = [
+  ...allServices.filter((x) => liveSlugs.includes(x.slug)).map((x) => ({ ...x, status: "live" as const })),
+  ...allServices.filter((x) => !liveSlugs.includes(x.slug)).map((x) => ({ ...x, status: "upcoming" as const })),
+].map((x, i) => ({ ...x, no: String(i + 1).padStart(2, "0") }));
+
+export const liveServices = services.filter((x) => x.status === "live");
+export const upcomingServices = services.filter((x) => x.status === "upcoming");
+
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
 
 /* ------------------------------------------------------------------ */
@@ -263,134 +277,56 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "integrated-city-waste-programme",
-    name: "Integrated City Waste Programme",
-    location: "Uttar Pradesh",
-    category: "Municipal Solid Waste",
-    serviceSlug: "municipal-solid-waste-management",
-    status: "Operational",
-    client: "Urban local body",
-    overview:
-      "A city-wide programme covering doorstep collection, secondary transport and processing under a single accountable operator.",
-    challenge:
-      "Fragmented contracts, irregular collection and mixed waste reaching the disposal site meant the city had little visibility of its waste flows and limited recovery.",
-    approach: [
-      "Ward-level survey and beat planning across the service area",
-      "Segregated collection with GPS-tracked vehicles",
-      "Consolidated transfer and processing operations",
-      "Monthly performance reporting to the client",
-    ],
-    outcomes: [
-      "Single point of accountability for the entire waste chain",
-      "Verified, data-backed reporting on collection coverage",
-      "Increased share of waste diverted to processing",
-    ],
-    image: img.truckWorkers,
-    gallery: [img.collectionCrew, img.machinery, img.landfillAerial],
-  },
-  {
-    slug: "material-recovery-facility",
-    name: "Material Recovery Facility",
-    location: "Mathura, Uttar Pradesh",
-    category: "Material Recovery",
-    serviceSlug: "material-recovery-recycling",
-    status: "Operational",
-    client: "Municipal body",
-    overview:
-      "Operation of a material recovery facility that sorts dry waste into recycler-grade fractions and channels them to authorised recyclers.",
-    challenge:
-      "Dry waste arrived mixed and contaminated, limiting its value and sending recoverable material to landfill.",
-    approach: [
-      "Reconfigured picking lines for local waste composition",
-      "Grading by material, polymer and colour",
-      "Baling and traceable dispatch documentation",
-      "Inclusion of trained waste pickers in formal roles",
-    ],
-    outcomes: [
-      "Cleaner, higher-value recyclable fractions",
-      "Full traceability from intake to recycler",
-      "Safer, formalised working conditions",
-    ],
-    image: img.bales,
-    gallery: [img.conveyorWorker, img.balesCardboard, img.bottlesCans],
-  },
-  {
-    slug: "legacy-waste-remediation",
-    name: "Legacy Waste Remediation",
-    location: "Northern India",
-    category: "Bio-mining & Remediation",
-    serviceSlug: "municipal-solid-waste-management",
-    status: "In progress",
-    client: "Development authority",
-    overview:
-      "Scientific bio-mining of an accumulated dumpsite to recover land and divert reusable fractions away from disposal.",
-    challenge:
-      "Years of unmanaged dumping had created a legacy site affecting groundwater, air quality and nearby communities.",
-    approach: [
-      "Topographic survey and waste characterisation",
-      "Bio-stabilisation followed by mechanical screening",
-      "Channelling of RDF, soil-like material and inerts to reuse",
-      "Environmental monitoring throughout operations",
-    ],
-    outcomes: [
-      "Progressive recovery of land for productive use",
-      "Recovered fractions directed to verified end users",
-      "Reduced environmental risk to surrounding areas",
-    ],
-    image: img.landfillDozer,
-    gallery: [img.landfillAerial2, img.scrapExcavator, img.machinery],
-  },
-  {
-    slug: "industrial-estate-waste-services",
-    name: "Industrial Estate Waste Services",
-    location: "Haryana",
-    category: "Commercial & Industrial",
-    serviceSlug: "commercial-industrial-waste",
-    status: "Operational",
-    client: "Industrial estate association",
-    overview:
-      "Shared waste services for manufacturing units across an industrial estate, with documented collection and recovery.",
-    challenge:
-      "Individual units managed waste independently, with inconsistent compliance records and little recovery.",
-    approach: [
-      "Site audits across participating units",
-      "Scheduled, shared collection routes",
-      "Segregation support and on-site storage protocols",
-      "Recycling certificates and ESG-ready data",
-    ],
-    outcomes: [
-      "Consistent compliance documentation for every unit",
-      "Lower per-unit logistics cost through shared routes",
-      "Data available for sustainability reporting",
-    ],
-    image: img.warehouseTruck,
-    gallery: [img.plantNight, img.factoryWalk, img.cans],
-  },
-  {
     slug: "door-to-door-collection-wards",
-    name: "Doorstep Collection Programme",
-    location: "Delhi NCR",
+    name: "Ward Doorstep Collection Programme",
+    location: "Uttar Pradesh",
     category: "Door-to-Door Collection",
     serviceSlug: "door-to-door-collection",
     status: "Operational",
-    client: "Residential township",
+    client: "Urban local body",
     overview:
-      "Segregated doorstep collection for a large residential township, paired with resident awareness and on-site composting.",
+      "Daily segregated doorstep collection across residential and commercial wards, with fixed timings and resident awareness drives.",
     challenge:
-      "Low segregation rates and irregular pick-ups were creating overflowing bins and resident complaints.",
+      "Irregular pick-ups and mixed waste were leading to roadside dumping, overflowing bins and frequent citizen complaints.",
     approach: [
-      "Fixed collection timings for every block",
-      "Colour-coded bins and resident awareness sessions",
-      "On-site composting for wet waste",
-      "Complaint resolution within the same day",
+      "Household survey and ward-wise beat planning",
+      "Fixed collection timings announced to every street",
+      "Separate wet and dry compartments on every vehicle",
+      "Same-day resolution of missed-collection complaints",
     ],
     outcomes: [
       "Predictable, on-time collection for residents",
-      "Improved segregation at source",
-      "Wet waste processed within the township",
+      "Fewer roadside dumping points in covered wards",
+      "Improving segregation at source",
     ],
     image: img.doorToDoor,
-    gallery: [img.binsRow, img.soil, img.truckBins],
+    gallery: [img.collectionCrew, img.binsRow, img.truckBins],
+  },
+  {
+    slug: "street-sweeping-sanitation",
+    name: "Street Sweeping & Sanitation Programme",
+    location: "Uttar Pradesh",
+    category: "Sweeping & Sanitation",
+    serviceSlug: "sweeping-sanitation",
+    status: "Operational",
+    client: "Urban local body",
+    overview:
+      "Beat-wise road sweeping, drain cleaning and market sanitation, supervised daily with same-day lifting of all swept waste.",
+    challenge:
+      "Main roads and markets were swept irregularly, and swept waste and drain silt were often left on the roadside.",
+    approach: [
+      "Roads mapped into sweeping beats by footfall",
+      "Morning and night shifts for markets and main roads",
+      "Geo-tagged photo checks for beat completion",
+      "Same-day lifting of swept waste and silt",
+    ],
+    outcomes: [
+      "Visibly cleaner roads and market areas",
+      "No swept waste left on the roadside",
+      "Transparent daily reporting to the client",
+    ],
+    image: img.streetSweeping,
+    gallery: [img.sweeperYellow, img.streetCleanerCart, img.broomStreet],
   },
 ];
 
@@ -401,10 +337,9 @@ export const getProject = (slug: string) => projects.find((p) => p.slug === slug
 /*  PLACEHOLDER openings — replace with live vacancies.                 */
 /* ------------------------------------------------------------------ */
 export const openings = [
-  { title: "Operations Manager — Municipal Contracts", team: "Operations", location: "Uttar Pradesh", type: "Full-time" },
-  { title: "Plant Supervisor — Material Recovery", team: "Processing", location: "Mathura", type: "Full-time" },
-  { title: "Fleet & Logistics Coordinator", team: "Logistics", location: "Delhi NCR", type: "Full-time" },
-  { title: "Environmental Compliance Executive", team: "EHS", location: "Corporate Office", type: "Full-time" },
+  { title: "Sanitation Supervisor", team: "Field Operations", location: "Uttar Pradesh", type: "Full-time" },
+  { title: "Ward Supervisor — Door-to-Door Collection", team: "Field Operations", location: "Uttar Pradesh", type: "Full-time" },
+  { title: "Collection Vehicle Driver", team: "Fleet", location: "Uttar Pradesh", type: "Full-time" },
   { title: "Community Engagement Officer", team: "Field Programmes", location: "Multiple locations", type: "Full-time" },
-  { title: "Graduate Engineer Trainee", team: "Engineering", location: "Multiple locations", type: "Trainee" },
+  { title: "MIS & Reporting Executive", team: "Operations", location: "Corporate Office", type: "Full-time" },
 ];

@@ -5,7 +5,7 @@ import { img } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Selected Haritvanta projects in municipal waste management, material recovery, remediation and industrial waste services.",
+  description: "Haritvanta projects in door-to-door waste collection and street sweeping & sanitation across Uttar Pradesh.",
 };
 
 export default function ProjectsPage() {
@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Our Work"
         title={"Projects that keep\ncities moving."}
-        intro="A selection of programmes across collection, processing, recovery and remediation — each designed around local conditions and measured against clear outcomes."
+        intro="Programmes in door-to-door collection and street sanitation — each planned around local conditions and measured against clear daily outcomes."
         image={img.landfillAerial2}
       />
       <section className="bg-white py-20 md:py-28">

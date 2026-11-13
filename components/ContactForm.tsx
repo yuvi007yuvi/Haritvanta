@@ -99,7 +99,7 @@ export function ContactForm() {
           <Field id="interest" label="Enquiry type" required error={err("interest")} full>
             <select id="cf-interest" value={f.interest} onChange={(e) => set("interest", e.target.value)} onBlur={() => blur("interest")} className={`${inputCls(!!err("interest"))} appearance-none bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23173F32%22 stroke-width=%221.5%22><path d=%22m6 9 6 6 6-6%22/></svg>')] bg-[length:18px] bg-[right_0_center] bg-no-repeat pr-8`} aria-invalid={!!err("interest")} aria-describedby={err("interest") ? "cf-interest-err" : undefined}>
               <option value="">Select an option</option>
-              {services.map((s) => <option key={s.slug} value={s.title}>{s.title}</option>)}
+              {services.map((s) => <option key={s.slug} value={s.title}>{s.title}{s.status === "upcoming" ? " (coming soon)" : ""}</option>)}
               <option value="Integrated / multiple services">Integrated / multiple services</option>
               <option value="Partnership or vendor enquiry">Partnership or vendor enquiry</option>
               <option value="Other">Other</option>

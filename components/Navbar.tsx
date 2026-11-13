@@ -132,7 +132,7 @@ export function Navbar() {
                   <div>
                     <p className="eyebrow text-muted">Our Services</p>
                     <p className="mt-4 font-display text-2xl font-semibold leading-snug text-forest">
-                      Integrated solutions across the entire waste value chain.
+                      Doorstep collection and street sanitation today — more services coming soon.
                     </p>
                   </div>
                   <Link href="/services" className="group mt-6 inline-flex items-center gap-2 text-sm font-medium text-forest">
@@ -146,10 +146,13 @@ export function Navbar() {
                         href={`/services/${s.slug}`}
                         onMouseEnter={() => setPreview(i)}
                         onFocus={() => setPreview(i)}
-                        className="group flex items-baseline gap-5 py-3.5 text-charcoal transition-colors hover:text-forest"
+                        className={`group flex items-baseline gap-5 transition-colors hover:text-forest ${s.status === "live" ? "py-3.5 text-charcoal" : "py-2.5 text-sm text-muted"}`}
                       >
                         <span className={`text-xs tabular-nums transition-colors ${preview === i ? "text-bhagwa" : "text-muted"}`}>{s.no}</span>
-                        <span className="font-medium transition-transform duration-500 ease-expo group-hover:translate-x-1.5">{s.title}</span>
+                        <span className={`flex-1 transition-transform duration-500 ease-expo group-hover:translate-x-1.5 ${s.status === "live" ? "font-medium" : ""}`}>{s.title}</span>
+                        <span className={`text-[0.65rem] uppercase tracking-[0.12em] ${s.status === "live" ? "text-bhagwa" : "text-muted/70"}`}>
+                          {s.status === "live" ? "Live" : "Soon"}
+                        </span>
                       </Link>
                     </li>
                   ))}

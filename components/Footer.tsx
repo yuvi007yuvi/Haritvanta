@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { LogoMark } from "./Logo";
-import { company, nav, services } from "@/lib/data";
+import { company, liveServices, nav } from "@/lib/data";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -15,7 +15,7 @@ export function Footer() {
               <span className="font-display text-xl font-bold tracking-[0.14em]">HARITVANTA</span>
             </Link>
             <p className="mt-7 max-w-sm leading-relaxed text-white/65">
-              Integrated waste management and environmental services for cities, communities and industry across
+              Door-to-door waste collection and street sweeping &amp; sanitation for cities and communities across
               India — delivered with operational discipline and long-term responsibility.
             </p>
             <Link
@@ -34,9 +34,10 @@ export function Footer() {
           </FooterCol>
 
           <FooterCol title="Services" className="lg:col-span-3">
-            {services.map((s) => (
+            {liveServices.map((s) => (
               <FooterLink key={s.slug} href={`/services/${s.slug}`}>{s.title}</FooterLink>
             ))}
+            <FooterLink href="/services">More services coming soon</FooterLink>
           </FooterCol>
 
           <FooterCol title="Contact" className="lg:col-span-2">
