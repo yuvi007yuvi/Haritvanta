@@ -67,9 +67,29 @@ export default function CareersPage() {
               <Eyebrow>Current Openings</Eyebrow>
               <h2 className="display-md mt-6 text-forest">Open positions.</h2>
             </div>
-            <p className="text-sm text-muted">{openings.length} roles · Updated regularly</p>
+            {openings.length > 0 && <p className="text-sm text-muted">{openings.length} roles · Updated regularly</p>}
           </div>
-          <ul className="mt-14 border-t border-forest/15">
+          {openings.length === 0 && (
+            <Reveal className="mt-14 grid gap-8 border-y border-forest/15 py-12 md:grid-cols-12 md:items-center">
+              <div className="md:col-span-8">
+                <p className="font-display text-2xl font-semibold text-charcoal md:text-3xl">There are no open positions right now.</p>
+                <p className="mt-3 max-w-xl leading-relaxed text-muted">
+                  We are growing, and new roles open as we add cities and services. Send us your CV and we will get in
+                  touch when a suitable opportunity comes up.
+                </p>
+              </div>
+              <div className="md:col-span-4 md:text-right">
+                <a
+                  href={`mailto:${company.careersEmail}?subject=${encodeURIComponent("CV for future opportunities")}`}
+                  className="group inline-flex items-center gap-2 font-medium text-forest"
+                >
+                  <span className="link-line">Send your CV</span>
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-500 ease-expo group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden />
+                </a>
+              </div>
+            </Reveal>
+          )}
+          <ul className={openings.length ? "mt-14 border-t border-forest/15" : "hidden"}>
             {openings.map((o, i) => (
               <Reveal as="li" key={o.title} delay={i * 0.04} className="border-b border-forest/15">
                 <a

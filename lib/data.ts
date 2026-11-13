@@ -361,13 +361,9 @@ export const getProject = (slug: string) => projects.find((p) => p.slug === slug
 /*  CAREERS                                                             */
 /*  PLACEHOLDER openings — replace with live vacancies.                 */
 /* ------------------------------------------------------------------ */
-export const openings = [
-  { title: "Sanitation Supervisor", team: "Field Operations", location: "Uttar Pradesh", type: "Full-time" },
-  { title: "Ward Supervisor — Door-to-Door Collection", team: "Field Operations", location: "Uttar Pradesh", type: "Full-time" },
-  { title: "Collection Vehicle Driver", team: "Fleet", location: "Uttar Pradesh", type: "Full-time" },
-  { title: "Community Engagement Officer", team: "Field Programmes", location: "Multiple locations", type: "Full-time" },
-  { title: "MIS & Reporting Executive", team: "Operations", location: "Corporate Office", type: "Full-time" },
-];
+// No openings at the moment. Add roles here when hiring, e.g.:
+// { title: "Sanitation Supervisor", team: "Field Operations", location: "Uttar Pradesh", type: "Full-time" },
+export const openings: { title: string; team: string; location: string; type: string }[] = [];
 
 /* ------------------------------------------------------------------ */
 /*  TEAM                                                                */
